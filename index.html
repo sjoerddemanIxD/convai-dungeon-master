@@ -33,7 +33,7 @@ Edit the following fields to finish the project page:
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
 
   <!-- (2) Change the title of the page -->
-  <title>IxD Research Project Template</title>
+  <title>ConvAI Dungeon Master</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -63,21 +63,21 @@ Edit the following fields to finish the project page:
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- (3) Title of the project -->
-            <h1 class="title is-1 publication-title">IxD Research Project Template</h1>
+            <h1 class="title is-1 publication-title">ConvAI Dungeon Master</h1>
             <div class="is-size-5 publication-authors">
               <!-- (4) Authors of the project -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Prof.dr.ir. M.J. (Mark) de Graaf</a><sup>*</sup>,</span>
+                <a href="https://www.linkedin.com/in/sjoerd-van-der-lee/" target="_blank">Sjoerd van der Lee</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">L.R. (Lonn) van Bokhorst</a><sup>*</sup>,</span>
+                  <a href="https://www.linkedin.com/in/lonnvanbokhorst/" target="_blank">Lonn van Bokhorst</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">drs. L. (Linda) Lamers</a>
+                    <a href="https://www.linkedin.com/in/mark-de-graaf-b630278/" target="_blank">Mark de Graaf</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- (5) Author Affiliations -->
-                    <span class="author-block">Fontys University of Applied Sciences, FICT</span><br><span class="author-block">Research Group IxD</span><br><span class="author-block"></span>
+                    <span class="author-block">Fontys University of Applied Sciences, FICT</span><br><span class="author-block">Research Group on Interaction Design</span><br><span class="author-block"></span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -180,7 +180,7 @@ Edit the following fields to finish the project page:
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            This is where the introduction to your research project goes. Provide an overview of the problem you are addressing, the main objectives of your research, and the key contributions of your work. This section should be engaging and accessible to a broad audience, including those who may not be experts in your field.
+            Welcome, adventurer, to the ConvAI Dungeon Master! I am your guide in a world of fantasy and imagination. Together, we will weave epic tales, battle fierce monsters, and uncover forgotten treasures. My purpose is to create a dynamic and engaging Dungeons & Dragons experience, tailored just for you. Whether you are a seasoned player or new to the world of tabletop RPGs, I am here to facilitate your journey. Let's begin!
           </p>
         </div>
       </div>
@@ -188,93 +188,37 @@ Edit the following fields to finish the project page:
   </div>
 </section>
 
-<section class="section hero is-light">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <!-- Chat box -->
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            This is where your project's abstract goes. Be concise and impactful. Highlight the key contributions and findings of your work. The abstract should provide a standalone summary of your research, including the problem, methods, results, and conclusions.
-          </p>
+        <div class="chat-container">
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+            <div class="message is-primary">
+              <div class="message-body">
+                Welcome to the ConvAI Dungeon Master. Your adventure begins now!
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <input class="input" type="text" id="user-input" placeholder="What do you do?">
+              </div>
+              <div class="control">
+                <a class="button is-info" id="send-button">
+                  Send
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
-
-
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <p>
-            This section should present the results of your research. Use a combination of text, images, and videos to showcase your findings in a clear and compelling way. Make sure to provide context for your results and explain what they mean in relation to your research questions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Discussion</h2>
-        <div class="content has-text-justified">
-          <p>
-            In the discussion section, you should interpret your results and explain their implications. What do your findings mean for your field of research? What are the limitations of your study? What are some potential directions for future research? This is your opportunity to engage in a critical reflection on your work and its contribution to the broader academic conversation.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Conclusion</h2>
-        <div class="content has-text-justified">
-          <p>
-            The conclusion should provide a concise summary of your research and its main findings. Reiterate the key contributions of your work and its significance for your field. You can also use this section to offer some final thoughts on your research and its potential impact.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- (13) BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <p>
-        If you find our work helpful, please consider citing it. For your convenience, we've provided a BibTeX entry for this project template below. BibTeX is a reference management tool used with LaTeX to handle citations and bibliographies. By including a BibTeX entry, you make it easier for other researchers to cite your work in their own publications.
-      </p>
-      <p>
-        To use it, create a file named <code>references.bib</code> (or any other name) in your project folder and copy the code below into it. In your LaTeX document, you can then cite this work using the command <code>\cite{deGraaf2025IxDTemplate}</code>. LaTeX and BibTeX will automatically format the citation and add it to your reference list. Remember to replace <code>URL_OF_THIS_WEBSITE</code> with the actual URL of this page. By providing a clear and accessible way to cite your work, you can increase its visibility and impact in your field.
-      </p>
-      <pre><code>@misc{deGraaf2025IxDTemplate,
-  author       = {de Graaf, Mark and van Bokhorst, Lonn and Lamers, Linda},
-  title        = {IxD Research Project Template},
-  howpublished = {Fontys University of Applied Sciences, Research Group IxD},
-  year         = {2025},
-  url          = {URL_OF_THIS_WEBSITE}
-}</code></pre>
-    </div>
-  </section>
-<!--End BibTex citation -->
-
 
   <footer class="footer">
   <div class="container">
