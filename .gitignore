@@ -10,3 +10,7 @@ static/.DS_Store
 
 # Environment variables
 .env
+
+# venv
+venv/
+backend/venv/
