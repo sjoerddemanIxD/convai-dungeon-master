@@ -174,5 +174,21 @@ body {
   border-top: 1px solid #dbdbdb;
 }
 
+.message-body {
+  padding: 8px 12px;
+}
+
+.message.is-user .message-body {
+  background-color: #e0e0e0;
+  color: black;
+  border-radius: 10px;
+}
+
+.message.is-primary .message-body {
+  background-color: #1b8b7e;
+  color: white;
+  border-radius: 10px;
+}
+
 
 

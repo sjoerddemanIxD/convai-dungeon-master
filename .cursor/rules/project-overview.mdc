@@ -1,0 +1,33 @@
+---
+description: "High-level overview of the ConvAI Dungeon Master project, including its structure and how to run it."
+---
+# ConvAI Dungeon Master Project Overview
+
+This document provides a guide to the project structure, setup, and key components.
+
+## Project Structure
+
+The project is divided into two main parts:
+
+-   **Frontend:** The user-facing web interface, located in the root directory and `static/`.
+    -   `index.html`: The main HTML file for the user interface.
+    -   `static/css/index.css`: Contains all the custom styles for the chat interface.
+    -   `static/js/index.js`: Handles all the frontend logic, like sending messages and displaying responses.
+-   **Backend:** The Python server that powers the AI Dungeon Master.
+    -   `backend/app.py`: The main Flask server file. It contains the `/chat` API endpoint that receives user messages and will eventually connect to the AI model.
+    -   `backend/requirements.txt`: Lists all the necessary Python dependencies.
+    -   `backend/venv/`: The Python virtual environment folder.
+
+## How to Run the Project
+
+1.  **Set up the Backend:**
+    - Navigate to the `backend` directory.
+    - Create a virtual environment: `python -m venv venv`
+    - Activate the environment: `venv\\Scripts\\activate` (on Windows)
+    - Install dependencies: `pip install -r requirements.txt`
+2.  **Start the Backend Server:**
+    - Run the command: `python backend/app.py`
+    - The server will start on `http://127.0.0.1:5000`.
+3.  **Launch the Frontend:**
+    - Open the `index.html` file in your web browser.
+    - You can now interact with the chat interface, which communicates with the backend server.

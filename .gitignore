@@ -7,3 +7,8 @@ static/.DS_Store
 
 # Cursor
 .cursorrules
+
+# venv
+venv/
+backend/venv/
+.env
