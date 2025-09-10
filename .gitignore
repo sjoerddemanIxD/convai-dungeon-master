@@ -7,3 +7,6 @@ static/.DS_Store
 
 # Cursor
 .cursorrules
+
+# Environment variables
+.env
