@@ -1,0 +1,45 @@
+{
+  "rules": [
+    {
+      "name": "On Falling Unconscious",
+      "event": "CHARACTER_HP_CHANGED",
+      "conditions": [
+        { "fact": "character.hp", "operator": "lessThanOrEqual", "value": 0 },
+        { "fact": "character.status", "operator": "notEqual", "value": "unconscious" },
+        { "fact": "character.status", "operator": "notEqual", "value": "dead" }
+      ],
+      "effects": [
+        {
+          "action": "update_character_state",
+          "updates": {
+            "status": "unconscious",
+            "death_saves": { "successes": 0, "failures": 0 }
+          }
+        },
+        {
+          "action": "add_log_message",
+          "message": "{character.name} falls unconscious!"
+        }
+      ]
+    },
+    {
+        "name": "On Instant Death",
+        "event": "CHARACTER_HP_CHANGED",
+        "conditions": [
+            { "fact": "character.hp", "operator": "lessThanOrEqual", "value": "negative_max_hp" }
+        ],
+        "effects": [
+            {
+              "action": "update_character_state",
+              "updates": {
+                "status": "dead"
+              }
+            },
+            {
+              "action": "add_log_message",
+              "message": "{character.name} is killed instantly by massive damage!"
+            }
+        ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "location": {
+        "name": "The Whispering Cave Entrance",
+        "description": "You stand at the mouth of a dark, moss-covered cave. A steady drip of water echoes from within, and a cool, damp breeze carries the scent of earth and something faintly... magical. A cascading waterfall to your right partially conceals the entrance, its roar a constant presence."
+    },
+    "characters": {},
+    "objects": {
+        "waterfall": {
+            "description": "A powerful waterfall crashes down into a shallow pool, obscuring the cave entrance. The water is crystal clear and cold.",
+            "state": "flowing"
+        },
+        "cave_entrance": {
+            "description": "A dark opening in the rock face, partially hidden by the waterfall.",
+            "state": "open"
+        }
+    },
+    "event_history": []
+}

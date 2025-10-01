@@ -1,5 +1,87 @@
 # backend/rules_engine.py
 import random
+import re
+import os
+import json
+import logging
+
+class RulesEngine:
+    def __init__(self, rules_directory):
+        self.rules = self._load_rules(rules_directory)
+
+    def _load_rules(self, directory):
+        """Loads all .json rule files from a directory."""
+        all_rules = {}
+        for filename in os.listdir(directory):
+            if filename.endswith('.json'):
+                filepath = os.path.join(directory, filename)
+                with open(filepath, 'r') as f:
+                    rules_data = json.load(f)
+                    for rule in rules_data.get('rules', []):
+                        event_type = rule.get('event')
+                        if event_type:
+                            if event_type not in all_rules:
+                                all_rules[event_type] = []
+                            all_rules[event_type].append(rule)
+        logging.info(f"Rules engine loaded {len(all_rules)} event types.")
+        return all_rules
+
+    def _check_condition(self, character_state, condition):
+        """Checks a single condition against the character's state."""
+        fact_path = condition['fact'].split('.')
+        
+        # Traverse the character state to get the fact value
+        fact_value = character_state
+        for p in fact_path:
+            fact_value = fact_value.get(p)
+            if fact_value is None:
+                return False # Path does not exist
+
+        operator = condition['operator']
+        value = condition['value']
+        
+        # Handle special condition values
+        if value == "negative_max_hp":
+            value = -character_state.get('max_hp', 0)
+
+        # Perform the comparison
+        if operator == 'lessThanOrEqual':
+            return fact_value <= value
+        if operator == 'greaterThanOrEqual':
+            return fact_value >= value
+        if operator == 'equal':
+            return fact_value == value
+        if operator == 'notEqual':
+            return fact_value != value
+            
+        return False
+
+    def process_event(self, event, character_state):
+        """Processes an event, checking all relevant rules and applying effects."""
+        event_type = event['type']
+        triggered_effects = []
+
+        if event_type not in self.rules:
+            return triggered_effects
+        
+        for rule in self.rules[event_type]:
+            conditions_met = True
+            for condition in rule.get('conditions', []):
+                if not self._check_condition(character_state, condition):
+                    conditions_met = False
+                    break
+            
+            if conditions_met:
+                logging.info(f"Rule '{rule['name']}' triggered for {character_state.get('name')}.")
+                # Apply all effects for this rule
+                for effect in rule.get('effects', []):
+                    triggered_effects.append({
+                        'effect': effect,
+                        'character': character_state
+                    })
+        
+        return triggered_effects
+
 
 def roll_dice(dice_notation):
     """

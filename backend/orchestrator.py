@@ -1,7 +1,7 @@
 # backend/orchestrator.py
 import json
 import logging
-from groq import Groq
+from groq import Groq, APIError
 
 def recognize_intent(client: Groq, user_message: str):
     """
@@ -43,6 +43,11 @@ def recognize_intent(client: Groq, user_message: str):
         )
         response_text = chat_completion.choices[0].message.content
         return json.loads(response_text)
+    except APIError as e:
+        logging.error(f"Groq API Error in intent recognition: {e.message}", exc_info=True)
+        # Pass a more specific error message up
+        raise ValueError(f"Groq API failed: {e.message}") from e
     except Exception as e:
-        logging.error(f"Error in intent recognition: {e}", exc_info=True)
-        return {"intent": "other", "target": None}
+        logging.error(f"Generic error in intent recognition: {e}", exc_info=True)
+        # Re-raise the exception to be caught by the main app loop
+        raise

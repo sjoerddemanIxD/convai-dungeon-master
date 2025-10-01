@@ -44,6 +44,30 @@ ConvAI Dungeon Master is a research project developed at Fontys University of Ap
 
 ## 🏗️ Architecture
 
+The application is architected with a Python/Flask backend and a lightweight HTML/CSS/JavaScript frontend, designed for modularity and easy extension.
+
+### How It Works: The Core Loop
+
+The application operates on a continuous loop that processes player input and generates a dynamic narrative. Here’s a step-by-step breakdown:
+
+1.  **Player Input**: The player types an action (e.g., *"I cast Fireball at the goblins"*) into the web interface and hits "Send".
+2.  **API Request**: The frontend JavaScript sends this message to the Flask backend's `/chat` endpoint.
+3.  **Intent Recognition (`orchestrator.py`)**: The backend first sends the raw text to a fast Groq LLM (Llama 3.1 8B). Its sole job is to analyze the text and return a structured JSON object identifying the player's core intent.
+    -   *Input*: `"I cast Fireball at the goblins"`
+    -   *Output*: `{"intent": "cast_spell", "spell_name": "Fireball", "target": "the goblins"}`
+4.  **Rules Adjudication (`rules_engine.py`)**: Armed with structured data, the backend now performs mechanical checks. For a spell, it consults `character.json` to see if the player knows "Fireball," has it prepared, and has an available spell slot. It also uses the `roll_dice()` function to calculate damage (`8d6`). The results are compiled into a clear summary.
+    -   *Output*: `["✓ Fireball is known", "✓ Spell slot available", "🎲 Damage roll: 8d6 = 32 damage"]`
+5.  **World State Update (`world_model.py`)**: The mechanical outcome is applied to the central `WorldModel`. The target goblin's HP is reduced by 32. The `WorldModel` ensures all game state changes are tracked consistently.
+6.  **Narrative Generation (`app.py`)**: The system now has everything it needs to tell the story. It sends a final, detailed prompt to the main Groq LLM (Llama 3.1 8B). This prompt includes:
+    -   The current `WorldModel` state (location, characters present, etc.).
+    -   The player's original action (`"I cast Fireball..."`).
+    -   The precise mechanical outcome (`"The spell succeeds, dealing 32 damage"`).
+7.  **AI Response**: The LLM uses this context to generate a compelling narrative that weaves the mechanics into the story. It also generates any non-mechanical world updates (e.g., a goblin's status changing to "frightened").
+    -   *Output*: `{ "narration": "A bead of roaring flame blossoms from your fingertip...", "world_state_update": { "goblin_1": { "status": "frightened" } } }`
+8.  **Frontend Display**: The backend sends the final narration, action summary, and updated NPC health back to the browser. The JavaScript then updates the chat window, the action log, and the NPC health bars.
+
+This cycle separates the "what" (player's intent) from the "how" (game mechanics) and the "story" (narrative), allowing for a robust and easily expandable system.
+
 ### Backend (Python/Flask)
 
 The backend is built with Flask and follows a modular architecture:
