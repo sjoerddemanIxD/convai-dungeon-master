@@ -1,16 +1,40 @@
-# VS Code
-.vscode/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
 
-# Mac
-static/.DS_Store
-.DS_Store
-
-# Cursor
-.cursorrules
+# Virtual Environment
+venv/
+env/
+ENV/
+backend/venv/
 
 # Environment variables
 .env
+*.env
 
-# venv
-venv/
-backend/venv/
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursorrules
+
+# Logs
+*.log
+logs/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+nul
