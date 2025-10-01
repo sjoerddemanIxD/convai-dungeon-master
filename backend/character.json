@@ -1,0 +1,77 @@
+{
+    "name": "Eldrin",
+    "portrait_url": "https://i.pinimg.com/736x/7d/a5/d8/7da5d82ff0d2044893a23ed1fee201a6.jpg",
+    "class": "Wizard",
+    "level": 1,
+    "race": "High Elf",
+    "alignment": "Neutral Good",
+    "experience_points": 0,
+    "ability_scores": {
+        "strength": {"score": 10, "modifier": 0},
+        "dexterity": {"score": 14, "modifier": 2},
+        "constitution": {"score": 12, "modifier": 1},
+        "intelligence": {"score": 18, "modifier": 4},
+        "wisdom": {"score": 15, "modifier": 2},
+        "charisma": {"score": 8, "modifier": -1}
+    },
+    "inspiration": 0,
+    "proficiency_bonus": 2,
+    "saving_throws": {
+        "strength": {"proficient": false, "modifier": 0},
+        "dexterity": {"proficient": false, "modifier": 2},
+        "constitution": {"proficient": false, "modifier": 1},
+        "intelligence": {"proficient": true, "modifier": 6},
+        "wisdom": {"proficient": true, "modifier": 4},
+        "charisma": {"proficient": false, "modifier": -1}
+    },
+    "skills": {
+        "acrobatics": {"proficient": false, "modifier": 2},
+        "animal_handling": {"proficient": false, "modifier": 2},
+        "arcana": {"proficient": true, "modifier": 6},
+        "athletics": {"proficient": false, "modifier": 0},
+        "deception": {"proficient": false, "modifier": -1},
+        "history": {"proficient": true, "modifier": 6},
+        "insight": {"proficient": false, "modifier": 2},
+        "intimidation": {"proficient": false, "modifier": -1},
+        "investigation": {"proficient": false, "modifier": 4},
+        "medicine": {"proficient": false, "modifier": 2},
+        "nature": {"proficient": false, "modifier": 4},
+        "perception": {"proficient": false, "modifier": 2},
+        "performance": {"proficient": false, "modifier": -1},
+        "persuasion": {"proficient": false, "modifier": -1},
+        "religion": {"proficient": false, "modifier": 4},
+        "sleight_of_hand": {"proficient": false, "modifier": 2},
+        "stealth": {"proficient": false, "modifier": 2},
+        "survival": {"proficient": false, "modifier": 2}
+    },
+    "passive_perception": 12,
+    "proficiencies_and_languages": {
+        "armor": [],
+        "weapons": ["Dagger", "Quarterstaff"],
+        "tools": [],
+        "languages": ["Common", "Elvish"]
+    },
+    "combat": {
+        "armor_class": 12,
+        "initiative": 2,
+        "speed": 30,
+        "hit_points": {"max": 7, "current": 7, "temporary": 0}
+    },
+    "features_and_traits": ["Darkvision", "Fey Ancestry", "Trance", "Arcane Recovery"],
+    "equipment": {
+        "money": {"cp": 0, "sp": 0, "ep": 0, "gp": 10, "pp": 0},
+        "items": ["Spellbook", "Quarterstaff", "Dagger", "Component Pouch", "Scholar's Pack"]
+    },
+    "spellcasting": {
+        "spellcasting_ability": "Intelligence",
+        "spell_save_dc": 14,
+        "spell_attack_bonus": 6,
+        "spells_known": {
+            "cantrips": ["Mage Hand", "Light", "Ray of Frost"],
+            "level_1": ["Magic Missile", "Shield", "Sleep", "Detect Magic"]
+        },
+        "spell_slots": {
+            "level_1": {"total": 2, "used": 0}
+        }
+    }
+}

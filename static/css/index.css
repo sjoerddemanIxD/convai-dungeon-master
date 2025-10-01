@@ -1,136 +1,22 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  background-color: #f5f5f5; /* A light grey background */
 }
 
-
-.footer .icon-link {
-    font-size: 25px;
-    color: #000;
-}
-
-.link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.dnerf {
-  font-variant: small-caps;
-}
-
-
-.teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
-
-.teaser {
+.title {
   font-family: 'Google Sans', sans-serif;
 }
 
-
-.publication-title {
+#character-sheet {
+  background-color: white;
 }
 
-.publication-banner {
-  max-height: parent;
-
+#character-sheet .content p {
+  margin-bottom: 0.5em;
 }
 
-.publication-banner video {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  object-fit: fit;
-}
-
-.publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
-}
-
-.publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
-}
-
-.publication-authors {
-}
-
-.publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
-}
-
-.publication-authors a:hover {
-    text-decoration: underline;
-}
-
-.author-block {
-  display: inline-block;
-}
-
-.publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
-.publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-    border-radius: 10px !important;
-}
-
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.publication-body img {
-}
-
-.results-carousel {
-  overflow: hidden;
-}
-
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  padding: 20px;
-  font-size: 0;
-}
-
-.results-carousel video {
-  margin: 0;
-}
-
-.slider-pagination .slider-page {
-  background: #000000;
-}
-
-.eql-cntrb { 
-  font-size: smaller;
+#character-sheet .title {
+  margin-bottom: 1em;
 }
 
 .chat-container {
@@ -138,7 +24,8 @@ body {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  height: 500px; /* Adjust as needed */
+  height: 80vh; /* Make chat taller */
+  background-color: white;
 }
 
 .chat-messages {
@@ -160,18 +47,41 @@ body {
   background-color: #00d1b2;
   color: white;
   align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-top: 5px; /* Adjust alignment */
+}
+
+.character-portrait {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.character-name {
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 .message.is-user {
-  background-color: #f5f5f5;
+  background-color: #e0e0e0;
   color: #363636;
   align-self: flex-end;
 }
 
-
 .chat-input-container {
   padding: 10px;
   border-top: 1px solid #dbdbdb;
+  background-color: #f5f5f5;
 }
 
 .message-body {
@@ -179,7 +89,6 @@ body {
 }
 
 .message.is-user .message-body {
-  background-color: #e0e0e0;
   color: black;
   border-radius: 10px;
 }
@@ -188,6 +97,90 @@ body {
   background-color: #1b8b7e;
   color: white;
   border-radius: 10px;
+}
+
+/* Action Summary */
+#action-summary {
+  margin-bottom: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#action-log {
+  font-size: 0.9em;
+}
+
+#action-log p {
+  margin-bottom: 0.3em;
+  padding: 5px;
+  border-left: 3px solid #00d1b2;
+  padding-left: 10px;
+}
+
+#action-log p.action-success {
+  border-left-color: #48c774;
+  background-color: #f0fdf4;
+}
+
+#action-log p.action-failure {
+  border-left-color: #f14668;
+  background-color: #fef2f2;
+}
+
+#action-log p.action-info {
+  border-left-color: #3298dc;
+  background-color: #f0f9ff;
+}
+
+/* NPC Health Tracker */
+#npc-health-tracker {
+  margin-bottom: 15px;
+}
+
+.npc-health-item {
+  margin-bottom: 10px;
+}
+
+.npc-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.health-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.health-bar {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.health-bar.healthy {
+  background-color: #48c774;
+}
+
+.health-bar.injured {
+  background-color: #ffdd57;
+  color: #363636;
+}
+
+.health-bar.critical {
+  background-color: #f14668;
 }
 
 

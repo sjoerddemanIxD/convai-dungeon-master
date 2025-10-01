@@ -1,201 +1,94 @@
-<!--
-This is a academic project page template. 
-Edit the following fields to finish the project page:
--   Title
--   Authors
--   Author links
--   Author affiliations
--   Links to paper, arxiv, supplementary, code, etc
--   Teaser video
--   Abstract
--   Image carousel
--   Video carousel
--   Poster
--   Bibtex
--->
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- (1) Edit the following meta tags for your project -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-
-  <!-- (2) Change the title of the page -->
   <title>ConvAI Dungeon Master</title>
-
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
 <body>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h1 class="title is-1 has-text-centered">ConvAI Dungeon Master</h1>
+      </div>
+    </div>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- (3) Title of the project -->
-            <h1 class="title is-1 publication-title">ConvAI Dungeon Master</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- (4) Authors of the project -->
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/sjoerd-van-der-lee/" target="_blank">Sjoerd van der Lee</a>,</span>
-                <span class="author-block">
-                  <a href="https://www.linkedin.com/in/lonnvanbokhorst/" target="_blank">Lonn van Bokhorst</a>,</span>
-                  <span class="author-block">
-                    <a href="https://www.linkedin.com/in/mark-de-graaf-b630278/" target="_blank">Mark de Graaf</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- (5) Author Affiliations -->
-                    <span class="author-block">Fontys University of Applied Sciences, FICT</span><br><span class="author-block">Research Group on Interaction Design</span><br><span class="author-block"></span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- (6) Links to paper, arxiv, supplementary, code -->
-                      <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Documentation PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-alt"></i>
-                      </span>
-                      <span>Documentation</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                  <!-- Model link -->
-                  <span class="link-block">
-                    <a href="https://huggingface.co/FICT" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="static/images/huggingface_logo-noborder.svg" alt="Hugging Face icon">
-                    </span>
-                    <span>Dataset</span>
-                  </a>
-                </span>
-
-                <!-- Dataset link -->
-                  <span class="link-block">
-                    <a href="https://huggingface.co/FICT" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="static/images/huggingface_logo-noborder.svg" alt="Hugging Face icon">
-                    </span>
-                    <span>Model</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+    <!-- Character Sheet and Chat Column Layout -->
+    <div class="columns">
+      <!-- Left Column: Character Sheet -->
+      <div class="column is-one-third">
+        <div class="box" id="character-sheet">
+          <h2 class="title is-4">Character Sheet</h2>
+          <div class="content">
+            <p><strong>Name:</strong> <span id="char-name"></span></p>
+            <p><strong>Race:</strong> <span id="char-race"></span></p>
+            <p><strong>Class & Level:</strong> <span id="char-class-level"></span></p>
+            <p><strong>Alignment:</strong> <span id="char-alignment"></span></p>
+            <hr>
+            <div class="columns is-multiline">
+              <div class="column is-half">
+                <h3 class="title is-5">Ability Scores</h3>
+                <p><strong>STR:</strong> <span id="char-str-score"></span> (<span id="char-str-mod"></span>)</p>
+                <p><strong>DEX:</strong> <span id="char-dex-score"></span> (<span id="char-dex-mod"></span>)</p>
+                <p><strong>CON:</strong> <span id="char-con-score"></span> (<span id="char-con-mod"></span>)</p>
+                <p><strong>INT:</strong> <span id="char-int-score"></span> (<span id="char-int-mod"></span>)</p>
+                <p><strong>WIS:</strong> <span id="char-wis-score"></span> (<span id="char-wis-mod"></span>)</p>
+                <p><strong>CHA:</strong> <span id="char-cha-score"></span> (<span id="char-cha-mod"></span>)</p>
+              </div>
+              <div class="column is-half">
+                <h3 class="title is-5">Combat</h3>
+                <p><strong>Armor Class:</strong> <span id="char-ac"></span></p>
+                <p><strong>Initiative:</strong> <span id="char-initiative"></span></p>
+                <p><strong>Speed:</strong> <span id="char-speed"></span></p>
+                <p><strong>HP:</strong> <span id="char-hp-current"></span> / <span id="char-hp-max"></span></p>
+              </div>
             </div>
+            <hr>
+            <h3 class="title is-5">Skills</h3>
+            <div id="char-skills"></div>
+            <hr>
+            <h3 class="title is-5">Features & Traits</h3>
+            <div id="char-features"></div>
+            <hr>
+            <h3 class="title is-5">Proficiencies & Languages</h3>
+            <div id="char-proficiencies-languages"></div>
+            <hr>
+            <h3 class="title is-5">Equipment</h3>
+            <div id="char-equipment"></div>
+            <hr>
+            <h3 class="title is-5">Spellcasting</h3>
+            <div id="char-spellcasting"></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-
-<!-- (7) Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- (8) Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
-        <div class="content has-text-justified">
-          <p>
-            Welcome, adventurer, to the ConvAI Dungeon Master! I am your guide in a world of fantasy and imagination. Together, we will weave epic tales, battle fierce monsters, and uncover forgotten treasures. My purpose is to create a dynamic and engaging Dungeons & Dragons experience, tailored just for you. Whether you are a seasoned player or new to the world of tabletop RPGs, I am here to facilitate your journey. Let's begin!
-          </p>
+      <!-- Right Column: Chat Box -->
+      <div class="column is-two-thirds">
+        <!-- Action Summary Bar -->
+        <div class="box" id="action-summary">
+          <h3 class="title is-5">Action Summary</h3>
+          <div id="action-log" class="content">
+            <p class="has-text-grey-light">Actions will appear here...</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Chat box -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
+        <!-- NPC Health Tracker -->
+        <div class="box" id="npc-health-tracker">
+          <h3 class="title is-5">Encounter Status</h3>
+          <div id="npc-health-bars" class="content">
+            <p class="has-text-grey-light">No active encounters</p>
+          </div>
+        </div>
+
         <div class="chat-container">
           <div class="chat-messages" id="chat-messages">
-            <!-- Messages will appear here -->
             <div class="message is-primary">
               <div class="message-body">
                 Welcome to the ConvAI Dungeon Master. Your adventure begins now!
@@ -208,9 +101,7 @@ Edit the following fields to finish the project page:
                 <input class="input" type="text" id="user-input" placeholder="What do you do?">
               </div>
               <div class="control">
-                <a class="button is-info" id="send-button">
-                  Send
-                </a>
+                <a class="button is-info" id="send-button">Send</a>
               </div>
             </div>
           </div>
@@ -220,29 +111,5 @@ Edit the following fields to finish the project page:
   </div>
 </section>
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
